@@ -16,23 +16,24 @@
   height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .scroll-steps {
   width: 50%;
-  padding-bottom: 50vh;
+  padding-bottom: 50vh; /* Allows the last step to scroll all the way up */
 }
 
 .step {
-  min-height: 100vh;
+  min-height: 100vh; /* Space out the explanations */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   opacity: 0.3;
   transition: opacity 0.3s ease;
 }
 
+/* Light up the active step text */
 .step.is-active {
   opacity: 1;
 }
@@ -43,7 +44,8 @@
    ========================================== */
 
 .image-wrapper {
-  position: relative;
+  position: relative; /* For responsiveness, absolute highlights are now relative to THIS, not the screen */
+  display: inline-block; /* Forces wrapper to shrink to the exact size of the img */
   width: 100%;
   transition: transform 0.6s ease;
 }
@@ -52,6 +54,7 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 /* Desktop image movement */
@@ -67,11 +70,9 @@
 .highlight-overlay {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
-  pointer-events: none;
+  pointer-events: none; /* Don't block scrolling/clicks */
 }
 
 .highlight-overlay rect {
@@ -87,25 +88,11 @@
    ACTIVE HIGHLIGHTS
    ========================================== */
 
-[data-active-step="step-highlight-top-left"] #hl-intro {
-  opacity: 1;
-}
-
-[data-active-step="step-highlight-top1"] #hl-content1 {
-  opacity: 1;
-}
-
-[data-active-step="step-highlight-middle"] #hl-content3 {
-  opacity: 1;
-}
-
-[data-active-step="step-highlight-bottom"] #hl-content2 {
-  opacity: 1;
-}
-
-[data-active-step="step-highlight-bottom2"] #hl-content4 {
-  opacity: 1;
-}
+[data-active-step="step-highlight-intro"] #hl-intro {opacity: 1;}
+[data-active-step="step-highlight-content1"] #hl-content1 {opacity: 1;}
+[data-active-step="step-highlight-content2"] #hl-content2 {opacity: 1;}
+[data-active-step="step-highlight-content3"] #hl-content3 {opacity: 1;}
+/* [data-active-step="step-highlight-content4"] #hl-content4 {opacity: 1;} */
 
 
 /* ==========================================

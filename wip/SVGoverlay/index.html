@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Visual Tour Through a Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+  </head>
+  <body>
+
+    <section class="container">
+      <div class="mx-auto mt-5 col-10 col-xl-8">
+
+        <h1>Visual Tour Through a Document</h1>
+        <p>
+          This is a visual tour through a document. As you scroll down, the graphic on the left will highlight different sections of the document to help you understand the content.
+        </p>
+
+        <section class="scrolly-container">
+
+          <div class="sticky-visual">
+            <div class="image-wrapper">
+
+              <img
+                src="img/github.com_msmoujaes.png"
+                alt="github profile"
+                id="graphic1"
+              >
+            
+              <svg
+                class="highlight-overlay"
+                viewBox="0 0 1000 1500"
+                preserveAspectRatio="xMidYMid meet">
+            
+                <!-- SVG Overlay -->
+                <rect
+                  id="hl-intro"
+                  x="230"
+                  y="120"
+                  width="850"
+                  height="410"
+                  rx="8"
+                  ry="8"
+                />
+            
+                <!-- Coords -->
+                <rect
+                  id="hl-content1"
+                  x="230"
+                  y="520"
+                  width="850"
+                  height="115"
+                  rx="8"
+                  ry="8"
+                />
+
+                <!-- Message -->
+                <rect
+                  id="hl-content2"
+                  x="230"
+                  y="635"
+                  width="850"
+                  height="130"
+                  rx="8"
+                  ry="8"
+                />
+            
+                <!-- Page Data -->
+                <rect
+                  id="hl-content3"
+                  x="230"
+                  y="760"
+                  width="850"
+                  height="620"
+                  rx="8"
+                  ry="8"
+                />
+            
+                <!-- Finishing Touches -->
+                <rect
+                  id="hl-content4"
+                  x="150"
+                  y="1445"
+                  width="720"
+                  height="125"
+                  rx="8"
+                  ry="8"
+                />
+            
+              </svg>
+            
+            </div>
+          </div>
+
+          <div class="scroll-steps">
+            <div id="base" class="step" data-step="step-base">
+              <h2>What You Need</h2>
+              <p>
+                You need a few important things to make this work.
+              </p>
+              <ul>
+                <li><strong>First, you need a graphic</strong> that represents the document you want to highlight. This could be a screenshot of the document, a diagram, or any other visual representation.</li>
+                <li><strong>Second, you need to create an SVG overlay</strong> that will highlight different sections of the graphic as the user scrolls through the text.</li>
+                <li><strong>Finally, you need some CSS/JavaScript code</strong> that will style the SVG overlay/detect when each step of the text is in view and update the SVG overlay accordingly.</li>
+              </ul>
+              <p>
+                This file includes all of the code you need to make this work, including the HTML structure, CSS styles, and JavaScript functionality.
+              </p>
+            </div>
+
+            <div id="svg-overlay" class="step" data-step="step-highlight-intro">
+              <h2>SVG Overlay</h2>
+              <p>
+                The SVG overlay allows you to highlight specific areas of the graphic as the user scrolls through the text.
+              </p>
+              <p>
+                Each rectangle corresponds to a different section of the graphic that you want to highlight; and each has an ID and a unique set of coordinates that define its position and size on the graphic:
+              </p>
+              <ul>
+                <li><em>x</em> - denoting its position on the x-axis (horizontal)</li>
+                <li><em>y</em> - denoting its position on the y-axis (vertical)</li>
+                <li><em>width</em> - denoting the width of the rectangle</li>
+                <li><em>height</em> - denoting the height of the rectangle</li>
+                <li>bonus specifications:
+                  <ul>
+                    <li><em>rx</em> - denoting the x-axis radius for rounded corners</li>
+                    <li><em>ry</em> - denoting the y-axis radius for rounded corners</li>
+                  </ul>
+                </li>
+              </ul>
+              
+            </div>
+
+            <div id="coords" class="step" data-step="step-highlight-content1">
+              <h2>Finding Coordinates in an Img</h2>
+              <p>
+                You can find these coordinates by using a tool like Figma or any other design tool that allows you to inspect the dimensions and positions of elements in your graphic.
+              </p>
+              <p>
+                You can also adjust the coordinates directly in the SVG code to fine-tune the highlights as needed.
+              </p>
+            </div>
+
+            <div id="message" class="step" data-step="step-highlight-content2">
+              <h2>Proper ID Maintenance</h2>
+              <p>
+                <strong>Be sure to give each step a unique ID and a data-step attribute that corresponds to the ID of the rectangle in the SVG overlay.</strong>
+              </p>
+              <p>
+                This will allow the JavaScript code to correctly identify which rectangle to highlight as the user scrolls through the text.
+              </p>
+            </div>
+
+          <div id="finishing-touches" class="step" data-step="step-highlight-content3">
+            <h2>The Finishing Touches</h2>
+              <p>
+                Feel free to use my existing css and JavaScript code as a starting point for your own implementation. You can customize the styles, animations, and functionality to fit your specific needs.
+              </p>
+              <p>
+                <strong>NOTE:</strong> The image in the img folder is just a placeholder. You will need to replace it with your own graphic that represents the document you want to highlight.
+              </p>
+          </div>
+        </div>
+
+        </section>
+
+        <section id="additionalInfo" class="mb-5">
+          <h2>Send me a message!</h2>
+              <p>
+                If my work aligns with what you're looking for, feel free to reach out!
+              </p>
+              <p>
+                <a href="www.linkedin.com/in/madeleine-moujaes-4b960232"><img alt="LinkedIn" src="https://img.shields.io/badge/Contact-LinkedIn-0077B5?logo=linkedin&logoColor=white&style-for-the-badge" /></a>
+              </p>
+        </section>
+
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+      const observerOptions = {
+        root: null, // uses viewport
+        rootMargin: "-40% 0px -40% 0px", // triggers when step is roughly in the middle 20% of screen
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const step = entry.target;
+            const container = step.closest('.scrolly-container');
+            const stepName = step.getAttribute('data-step');
+
+            // 1. Highlight the current text step
+            container.querySelectorAll('.step').forEach(s => s.classList.remove('is-active'));
+            step.classList.add('is-active');
+
+            // 2. Push the current step state to the container to trigger CSS highlights
+            container.setAttribute('data-active-step', stepName);
+
+           // IF NECESSARY: Scrolls the graphic up when the user scrolls to the DIV id specified below, and scrolls it back down when they leave those steps.
+            const graphic = document.querySelector('.image-wrapper');
+
+            if (
+              step.id === 'DIV-ID' ||
+              step.id === 'DIV-ID'
+            ) {
+              graphic.classList.add('move-up');
+            } else {
+              graphic.classList.remove('move-up');
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Attach observer to all steps across all infographic sections
+      document.querySelectorAll('.step').forEach(step => observer.observe(step));
+
+      const additionalInfo = document.getElementById('additionalInfo');
+
+      const endObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const container = document.querySelector('.scrolly-container');
+
+      // Remove all highlights
+      container.removeAttribute('data-active-step');
+
+      // Remove active step styling
+      container.querySelectorAll('.step').forEach(step => {
+        step.classList.remove('is-active');
+      });
+    }
+  });
+}, {
+  threshold: 0.25
+});
+
+endObserver.observe(additionalInfo);
+    </script>
+  </body>
+</html>
