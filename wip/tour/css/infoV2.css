@@ -87,23 +87,23 @@
    ACTIVE HIGHLIGHTS
    ========================================== */
 
-[data-active-step="step-highlight-top-left"] #hl-assessment {
+[data-active-step="step-highlight-top-left"] #hl-intro {
   opacity: 1;
 }
 
-[data-active-step="step-highlight-top1"] #hl-testlet-scores {
+[data-active-step="step-highlight-top1"] #hl-content1 {
   opacity: 1;
 }
 
-[data-active-step="step-highlight-middle"] #hl-best-scores {
+[data-active-step="step-highlight-middle"] #hl-content3 {
   opacity: 1;
 }
 
-[data-active-step="step-highlight-bottom"] #hl-diagnostic {
+[data-active-step="step-highlight-bottom"] #hl-content2 {
   opacity: 1;
 }
 
-[data-active-step="step-highlight-bottom2"] #hl-reporting {
+[data-active-step="step-highlight-bottom2"] #hl-content4 {
   opacity: 1;
 }
 
